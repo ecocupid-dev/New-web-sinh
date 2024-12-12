@@ -1,0 +1,53 @@
+.join-today {
+  padding: 80px 0;
+  background: #56F09F;
+
+  &-inner {
+    @apply grid grid-cols-12 gap-4;
+  }
+
+  &-svg {
+    @apply col-span-4;
+  }
+
+  &-content {
+    @apply col-span-8;
+    padding-left: 60px;
+
+    &-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 1.2rem;
+      color: #004737;
+    }
+
+    &-para {
+      color: #004737;
+      font-size: 22px;
+      letter-spacing: 0.6px;
+      line-height: 30px;
+    }
+
+    &-email {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    &-svg,
+    &-content {
+      @apply col-span-12;
+    }
+
+    &-svg {
+      width: 60vw;
+      margin: auto;
+    }
+
+    &-content {
+      padding-left: 0;
+    }
+  }
+}

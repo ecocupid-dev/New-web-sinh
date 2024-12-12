@@ -1,0 +1,75 @@
+.eco-readerStories-sl-swiper {
+  padding: 1rem 0;
+}
+
+.eco-readerStories-sl-swiper .swiper-slide {
+  /* transition: opacity 300ms, transform 300ms; */
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+
+/* .eco-readerStories-sl-swiper .swiper-slide.swiper-slide-active {
+  opacity: 1;
+} */
+
+/* 
+.eco-readerStories-sl-swiper
+  .swiper-slide.swiper-slide-active
+  .readerStories_eco-readerStories-sl-slide-image__T__ug {
+  transform: scale(1.2) !important;
+  transform: scale(1.05);
+
+} */
+
+/* .eco-readerStories-sl-swiper .swiper-slide-prev,
+.eco-readerStories-sl-swiper .swiper-slide-next {
+  transform: scale(0.9);
+} */
+
+.eco-readerStories-segmented
+  :where(.css-dev-only-do-not-override-djtmh8).ant-segmented
+  .ant-segmented-item-selected {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.eco-readerStories-sl-swiper .swiper-pagination-bullets {
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  position: absolute !important;
+  width: fit-content !important;
+  z-index: 9;
+  padding-top: 1rem;
+}
+
+.eco-readerStories-sl-swiper .swiper-pagination-bullet {
+  width: 20px;
+  height: 6px;
+  text-align: center;
+  border-radius: 8px;
+  line-height: 20px;
+  font-size: 12px;
+  color: transparent;
+  opacity: 1;
+  background: var(--pri);
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.eco-readerStories-sl-swiper .swiper-pagination-bullet-active {
+  width: 40px;
+  background: var(--priDark);
+}
+
+@media screen and (max-width: 768px) {
+  .eco-readerStories-sl-swiper {
+    padding: 12px 24px;
+  }
+  :where(.css-dev-only-do-not-override-ct38jq).ant-segmented.ant-segmented-lg
+    .ant-segmented-item-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

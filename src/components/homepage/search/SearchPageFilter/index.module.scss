@@ -1,0 +1,109 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  .searchWrapper {
+    min-width: 400px;
+    @media only screen and (max-width: 992px) {
+      min-width: 280px;
+      height: 46px;
+    }
+    @media only screen and (max-width: 600px) {
+      min-width: unset;
+      width: 100%;
+      height: 46px;
+    }
+  }
+  :global {
+    .ant-tag-checkable {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border: 1px dashed #c2c7d0;
+      border-radius: 12px;
+      font-weight: 500;
+      padding: 0 12px;
+      margin-right: 0;
+      &:hover {
+        background-color: #e6fff1;
+        color: #000;
+      }
+    }
+    .ant-tag-checkable-checked {
+      color: #000;
+      background-color: #d3ffe7;
+      border-color: #d3ffe7;
+    }
+  }
+  .checkableTagDisabled {
+    background-color: #ededed !important;
+    cursor: not-allowed;
+  }
+
+  .sortWrapper {
+    min-width: 150px;
+    :global {
+      .ant-select-selector {
+        border: none !important;
+        border-radius: 12px;
+        min-height: 45px;
+      }
+    }
+    @media only screen and (max-width: 992px) {
+      min-width: 280px;
+    }
+    @media only screen and (max-width: 600px) {
+      min-width: 170px;
+    }
+  }
+
+  .filterButtonWrapper {
+    max-height: 46px;
+    .filterButton {
+      height: 100%;
+      border-radius: 12px;
+      background-color: #f3ffd2;
+      color: var(--priOne);
+      &:hover {
+        background-color: #c4ffde !important;
+        color: var(--priOne);
+        border-color: #c4ffde;
+      }
+    }
+  }
+
+  .clearButtonWrapper {
+    max-height: 46px;
+    .clearButton {
+      height: 100%;
+      border-radius: 12px;
+      background-color: #f7f7f7;
+      color: var(--priOne);
+      &:hover {
+        background-color: #ffe8e8 !important;
+        color: var(--priOne);
+        border-color: #ffe8e8;
+      }
+    }
+  }
+}
+
+.filterContentWrapper {
+  max-width: 500px;
+  :global {
+    .ant-select-selector {
+      border: none !important;
+      border-radius: 12px;
+      min-height: 46px;
+    }
+  }
+  .filterContent {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}

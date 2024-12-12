@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* light mode */
+  --bgLight: white;
+  --textDark: #333333;
+
+  /* dark mode */
+  --bgDark: #0d0c22;
+  --textLight: white;
+
+  /* main color */
+  --pri: #a4cc38;
+  --priDark: #4e8f45;
+  --priLight: #f2ffd1;
+  --sec: #f5b2c3;
+  --secLight: #f3cdc8;
+
+  --textUnder: #57f09f;
+  --sectionBG: #FEFBEB;
+
+  /* Primary Color */
+  --priOne: #004737;
+  --priTwo: #14352a;
+  --priThree: #56f09f;
+  --priFour: #d3ffe7;
+  --priFive: #fefbeb;
+  --priSix: #9fb4a2;
+
+  /* Positive */
+  --P50: #e9f9ef;
+  --P75: #a4e7bd;
+  --P100: #7fdda2;
+  --P200: #48cf79;
+  --P300: #22c55e;
+  --P400: #188a42;
+  --P500: #157839;
+
+  /* Negative */
+  --N50: #fdecec;
+  --N75: #f8b2b2;
+  --N100: #f69393;
+  --N200: #f26464;
+  --N300: #ef4444;
+  --N400: #a73030;
+  --N500: #922929;
+
+  /* Blue */
+  --Blue50: #ecf6ff;
+  --Blue75: #b3dbff;
+  --Blue100: #93cbff;
+  --Blue200: #65b5ff;
+  --Blue300: #45a6ff;
+  --Blue400: #3074b3;
+  --Blue500: #2a659c;
+
+  /* Dark Blue */
+  --darkBlue50: #e8ecf0;
+  --darkBlue100: #b7c3d1;
+  --darkBlue200: #94a7bb;
+  --darkBlue300: #647e9c;
+  --darkBlue400: #456589;
+  --darkBlue500: #173f6b;
+  --darkBlue600: #153961;
+  --darkBlue700: #102d4c;
+  --darkBlue800: #0d233b;
+  --darkBlue900: #0a1a2d;
+
+
+}
+
+body {
+  background-color: var(--bgLight);
+  color: var(--textDark);
+  /* font-family: 'Lato', sans-serif; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  padding-top: 82px;
+}
+
+.container {
+  /* width: max(1200px, 100%); */
+  margin: auto;
+  padding: 0 12px;
+}
+
+.inner {
+  margin: 0 -12px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.section-main-title {
+  @apply relative;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 2rem;
+  z-index: 1;
+}
+
+.section-main-title h1 {
+  @apply font-gereralSans relative;
+  font-size: 3.8rem;
+  font-weight: 500;
+  text-align: center;
+  background: -webkit-linear-gradient(var(--priDark), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  z-index: 1;
+}
+
+.section-main-title-without::after {
+  display: none;
+}
+
+.section-main-title::after {
+  position: absolute;
+  content: '';
+  bottom: 10px;
+  width: 105%;
+  height: 20px;
+  left: -10px;
+  background: #D3FFE7;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.section-main-des {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* button antd */
+:where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(
+    .ant-btn-disabled
+  ):hover {
+  background: var(--priDark) !important;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none !important;
+}
+
+.swiper-3d .swiper-slide,
+.swiper-3d .swiper-cube-shadow {
+  /* margin: 1rem 0 !important; */
+}
+
+:where(.css-dev-only-do-not-override-djtmh8).ant-collapse>.ant-collapse-item >.ant-collapse-header {
+  align-items: center;
+}
+
+.film-latest-swiper {
+  overflow: visible !important;
+}
+
+@media screen and (max-width: 680px) {
+  .section-main-title {
+    font-size: 2.8rem;
+  }
+  .section-main-title::after {
+    display: none;
+  }
+  .section-main-title h1 {
+    font-size: 2.6rem;
+    line-height: normal;
+  }
+}
+
+:where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not( .ant-btn-disabled ):hover {
+  background: var(--priOne) !important;
+}
+
+/*Reset các styles có thể bị ảnh hưởng bởi Tailwind CSS*/
+.tinymce-content,
+.tinymce-content p,
+.tinymce-content ol,
+.tinymce-content ul,
+.tinymce-content li,
+.tinymce-content div,
+.tinymce-content span,
+.tinymce-content h1,
+.tinymce-content h2,
+.tinymce-content h3,
+.tinymce-content h1,
+.tinymce-content h4,
+.tinymce-content h5,
+.tinymce-content h6 {
+  all: revert;
+}
+
+/* Định dạng cho danh sách */
+.tinymce-content ol,
+.tinymce-content ul {
+  padding-left: 40px; /* Hoặc một giá trị phù hợp với thiết kế của bạn */
+}
+
+.tinymce-content ol {
+  list-style-type: decimal; /* Số */
+}
+
+.tinymce-content ul {
+  list-style-type: disc; /* Dấu chấm */
+}
+
+/* Định dạng cho list item */
+.tinymce-content li {
+  margin-bottom: 0.5em;
+}
+
+
+/* Cải thiện hiển thị cho các heading */
+/* .tinymce-content h1,
+.tinymce-content h2,
+.tinymce-content h3,
+.tinymce-content h4,
+.tinymce-content h5,
+.tinymce-content h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+} */
+
+/* Định dạng cho links */
+.tinymce-content a {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Định dạng cho bảng */
+.tinymce-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tinymce-content th,
+.tinymce-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Định dạng cho các đoạn văn */
+.tinymce-content p {
+  margin-bottom: 1em;
+}

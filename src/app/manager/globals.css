@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Lato", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.manager-main {
+  margin-top: 12px;
+  height: calc(100vh - 64px - 12px);
+  padding: 24px;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.manager-sider {
+  min-width: unset !important;
+  max-width: unset !important;
+}
+
+.sider-logo {
+  background: #004737;
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sider-logo-image {
+  border-radius: 8px;
+}
+
+.manager-header {
+  background: white;
+  line-height: normal;
+}
+
+.manager-menu {
+  background: #004737;
+  height: 100%;
+  border-inline-end: 0 !important;
+}
+
+.manager-menu .ant-menu-item {
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: unset;
+  line-height: normal;
+  margin: 0;
+}
+
+.manager-menu .ant-menu-item:hover {
+  color: white !important;
+}
+
+.manager-menu .ant-menu-item .menu-icon {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(309deg) brightness(103%) contrast(103%);
+}
+
+.manager-menu .ant-menu-item.ant-menu-item-selected {
+  background: #14352a !important;
+  margin: 0 !important;
+  width: 100%;
+  border-radius: 0;
+}
+
+.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed.manager-sider
+  .ant-menu-item {
+  padding-inline: calc(50% - 20px) !important;
+}
+
+.ant-btn-primary {
+  background: #004737 !important;
+}
+
+.ant-select-selector {
+  outline: none !important;
+  padding: 8px 16px !important;
+  border: none !important;
+  background: unset !important;
+  /* font-size: 20px; */
+}
+
+.ant-select-selection-placeholder {
+  color: #c6c6c6;
+}
+
+.box-content {
+  padding: 24px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+button.ant-switch {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+button.ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled),
+button.ant-switch.ant-switch-checked {
+  background-color: #57f09f;
+}

@@ -1,0 +1,29 @@
+.buttonMore {
+  @apply shadow-md; 
+  text-align: center;
+  border-radius: 9999px;
+  // background: -webkit-linear-gradient(var(--priDark), #333);
+  background: #56F09F;
+  width: fit-content;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  
+  span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--textDark);
+    font-weight: 600;
+  }
+
+
+  &:hover {
+    @apply shadow-none;
+    transform: translateY(4px) scale(0.98);
+  }
+}

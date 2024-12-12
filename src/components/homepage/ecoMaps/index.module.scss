@@ -1,0 +1,337 @@
+@keyframes markerAni {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.eco-section {
+}
+
+.eco-heroes {
+  padding-top: 80px !important;
+  margin-bottom: -120px !important;
+  z-index: 1;
+  position: relative;
+
+  &-head {
+    display: flex;
+    margin-bottom: 40px;
+
+    &-left {
+      flex: 1;
+
+      & > :first-child {
+        margin: unset;
+      }
+
+      & > p {
+        text-align: left;
+      }
+    }
+  }
+
+  &-list {
+    @apply grid grid-cols-12 gap-4;
+    min-width: 1200px;
+  }
+
+  &-item {
+    @apply col-span-3 shadow-md;
+    border: 2px solid #004737;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-thumnail {
+      width: 100%;
+      height: calc(100% - 120px);
+    }
+
+    &-body {
+      background-color: #d3ffe7;
+      padding: 24px;
+      height: 120px;
+    }
+
+    &-subTitle {
+      // font-family: "__Lato_5f06f5", "__Lato_Fallback_5f06f5";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19.6px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      color: #d87eb1;
+      text-transform: uppercase;
+    }
+
+    &-title {
+      color: #004737;
+      // font-family: "__Lato_5f06f5", "__Lato_Fallback_5f06f5";
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  @media (max-width: 780px) {
+    &-head {
+      flex-direction: column;
+
+      &-left {
+        flex: 1;
+
+        & > :first-child {
+          text-align: center;
+          width: 100%;
+        }
+
+        & > p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.eco-maps {
+  background: #004737;
+  clip-path: ellipse(70% 80% at 50% 10%);
+  padding-bottom: 10rem;
+
+  &-inner {
+    padding: 200px 0 !important;
+    position: relative;
+  }
+
+  &-content {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    z-index: 3;
+    width: 53%;
+
+    &-title {
+      margin: 0;
+      margin-left: auto;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-title,
+  &-des {
+    text-align: end !important;
+    background: -webkit-linear-gradient(#f3fddb, #f2f2f2) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    line-height: normal !important;
+  }
+
+  &-count {
+    font-size: 2rem;
+    color: white;
+    text-align: end;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+  }
+
+  &-map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &-flags {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      width: 1024px;
+
+      &-popover {
+        &-nameCountry {
+          font-weight: bold;
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          line-height: normal;
+        }
+        &-count {
+          font-weight: 500;
+          font-size: 1rem;
+          text-transform: uppercase;
+          color: var(--sec);
+        }
+        &-images {
+          display: flex;
+          gap: 10px;
+          margin: 16px 0;
+          max-width: 290px;
+          flex-wrap: wrap;
+
+          &-image {
+            width: 80px;
+          }
+        }
+      }
+
+      &-flag {
+        position: absolute;
+        z-index: 3;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &-image {
+          width: 30px;
+          height: 30px;
+          border-radius: 999px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 999px;
+          background-color: #828282;
+          animation: markerAni 1.5s ease-in-out forwards infinite;
+          z-index: -1;
+        }
+
+        &:hover {
+          transform: scale(1.3);
+        }
+
+        &-Brunei {
+          top: calc(600 / 1024 * 100%);
+          left: calc(460 / 1024 * 100%);
+        }
+
+        &-Cambodia {
+          top: calc(394 / 1024 * 100%);
+          left: calc(240 / 1024 * 100%);
+        }
+
+        &-East-Timor {
+          bottom: calc(50 / 1024 * 100%);
+          left: calc(680 / 1024 * 100%);
+        }
+
+        &-Indonesia {
+          top: calc(760 / 1024 * 100%);
+          left: calc(450 / 1024 * 100%);
+        }
+
+        &-Laos {
+          top: calc(220 / 1024 * 100%);
+          left: calc(190 / 1024 * 100%);
+        }
+
+        &-Malaysia {
+          top: calc(600 / 1024 * 100%);
+          left: calc(200 / 1024 * 100%);
+        }
+
+        &-Myanmar {
+          top: calc(140 / 1024 * 100%);
+          left: calc(53 / 1024 * 100%);
+        }
+
+        &-Philippines {
+          top: calc(320 / 1024 * 100%);
+          left: calc(580 / 1024 * 100%);
+        }
+
+        &-Singapore {
+          top: calc(690 / 1024 * 100%);
+          left: calc(260 / 1024 * 100%);
+        }
+
+        &-Thailand {
+          top: calc(320 / 1024 * 100%);
+          left: calc(150 / 1024 * 100%);
+        }
+
+        &-Vietnam {
+          top: calc(160 / 1024 * 100%);
+          left: calc(250 / 1024 * 100%);
+        }
+      }
+    }
+
+    &-svg {
+      z-index: 2;
+      // width: 100%;
+      height: 100%;
+      width: 1024px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    clip-path: ellipse(116% 80% at 50% 10%);
+
+    &-content {
+      position: relative;
+      top: unset;
+      right: 24px;
+    }
+
+    &-map {
+      width: 100%;
+      padding: 0 24px;
+      overflow: auto;
+
+      &-flags {
+        width: 1200px;
+        inset: unset;
+        top: 0;
+        bottom: 0;
+      }
+
+      &-svg {
+        width: 1200px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 13rem;
+  }
+  @media (max-width: 560px) {
+    clip-path: ellipse(170% 80% at 50% 10%);
+    padding-bottom: 9rem;
+
+    &-content {
+      position: relative;
+      top: unset;
+      right: 0;
+      width: 100%;
+      padding: 0 12px;
+      margin-bottom: 2rem;
+      margin-top: -2rem;
+
+      & > :first-child {
+        margin: unset;
+        width: 100%;
+
+        h1 {
+          font-size: 2.2rem;
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}

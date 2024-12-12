@@ -1,0 +1,59 @@
+.why-name {
+  @apply grid grid-cols-12 gap-4;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &-title {
+    @apply relative;
+    width: fit-content;
+    z-index: 1;
+  }
+
+  &-left {
+    @apply col-span-6;
+  }
+
+  &-right {
+    grid-column: 8 / 13;
+  }
+
+  &-para {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    margin-top: 40px;
+
+    &-brand {
+      color: #D87EB1;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &-right {
+      @apply col-span-6;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    &-title {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &-left {
+      @apply col-span-12;
+      order: 2;
+      display: flex;
+      justify-content: center
+    }
+
+    &-right {
+      @apply col-span-12;
+      order: 1;
+    }
+  }
+}

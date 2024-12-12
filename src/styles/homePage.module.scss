@@ -1,0 +1,8 @@
+.homePage-container {
+  width: 100vw;
+  padding-top: calc(82px + 1rem) !important;
+
+  @media (max-width: 560px) {
+    padding-top: calc(82px) !important;
+  }
+}

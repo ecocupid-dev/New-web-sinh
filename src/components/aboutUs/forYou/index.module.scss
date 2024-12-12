@@ -1,0 +1,57 @@
+.for-you {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &-boxs {
+    @apply grid grid-cols-12 gap-4;
+  }
+
+  &-box {
+    grid-column: 3 / 11;
+    padding: 24px;
+    background: #fefbeb;
+    border-radius: 8px;
+
+    &-image {
+      width: 120px;
+      height: 120px;
+      margin: auto;
+      border-radius: 999px;
+    }
+
+    &-title {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    &-para {
+      text-align: center;
+      line-height: 1.6rem;
+      font-size: 1.2rem;
+      letter-spacing: 0.3px;
+      color: #153961;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-box {
+      grid-column: 1/ 13;
+    }
+
+    // h1 {
+    //   font-size: 3rem !important;
+    // }
+  }
+
+  // @media (max-width: 580px) {
+  //   &-box {
+  //     &-title {
+  //       font-size: 1rem;
+  //       line-height: normal;
+  //     }
+  //   }
+  // }
+} 

@@ -1,0 +1,115 @@
+.input-wrapper {
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &-main {
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid #c2c7d0;
+  }
+
+  &-input {
+    flex: 1;
+
+    input {
+      @apply font-sfProDisplay;
+      // font-size: 1rem;
+      outline: none;
+      border: none;
+      letter-spacing: 0.6px;
+      padding: 12px 16px;
+      border-radius: 12px;
+
+      &:focus {
+        border-color: transparent;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    textarea {
+      @apply font-sfProDisplay;
+      // font-size: 1rem;
+      outline: none;
+      border: none;
+      letter-spacing: 0.6px;
+      padding: 12px 16px;
+      border-radius: 12px;
+
+      &:focus {
+        border-color: transparent;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &-suffix {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 12px;
+  }
+}
+
+.select-wrapper {
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+
+  &-select {
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid #c2c7d0;
+    // padding: 8px 16px;
+    height: fit-content;
+    font-size: 20px;
+  }
+}
+
+.upload-wrapper {
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+.label {
+  display: flex;
+
+  &-name {
+    // font-family: "__Ubuntu_1e1809", "__Ubuntu_Fallback_1e1809";
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+  }
+
+  &-required {
+    margin-left: 2px;
+    color: red;
+  }
+}
+
+.error-msg {
+  color: #f31515;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: end;
+  margin-top: 6px;
+  margin-right: 6px;
+}

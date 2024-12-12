@@ -1,0 +1,27 @@
+.modal-form {
+  
+  &-content {
+    
+  }
+  
+  &-title {
+    font-weight: bold;
+    font-size: 1.4rem;
+    // border-bottom: 0.5px solid #dedede;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+  }
+  
+  &-body {
+    max-height: 60vh;
+    overflow: hidden auto;
+    padding: 8px 0;
+  }
+
+  &-footer {
+    // border-top: 0.5px solid #dedede;
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;  }
+}

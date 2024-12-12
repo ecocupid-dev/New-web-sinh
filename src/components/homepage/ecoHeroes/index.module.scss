@@ -1,0 +1,52 @@
+.eco-heroes {
+  padding: 80px 0 !important;
+
+  &-sl {
+    &-slide {
+      @apply shadow-md;
+      border: 1px solid #dff0b1;
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+
+      &-image {
+        height: 20rem;
+      }
+
+      &-content {
+        padding: 12px 24px;
+      }
+
+      &-name {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: normal;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        margin: 1rem 0;
+      }
+
+      &-buttonMore {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        background: #d0d0d0 !important;
+        border: none;
+        border-radius: 12px 0 0 0;
+        margin-left: auto;
+
+        &-text {
+          font-weight: 600;
+          color: #333;
+          text-transform: capitalize;
+        }
+
+        &-icon {
+          width: 1.4rem !important;
+        }
+      }
+    }
+  }
+}

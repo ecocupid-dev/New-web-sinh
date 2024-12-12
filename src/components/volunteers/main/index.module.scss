@@ -1,0 +1,87 @@
+.volunteer {
+  @apply grid grid-cols-12 gap-4;
+  padding-bottom: 24px;
+
+
+  &-main {
+    @apply col-span-8;
+
+    &-buttonSignUp {
+      @apply shadow-none;
+      text-transform: uppercase;
+      outline: none;
+      border: 0;
+      background: #56F09F;
+      border-radius: 999px;
+      
+      span {
+        font-weight: 600;
+        color: #004737
+      }
+
+      &:hover {
+        span {
+          color: white
+        }
+      }
+    }
+  }
+
+  &-sidebar {
+    @apply col-span-4;
+    
+    &-content {
+      background: #004737;
+      color: white;
+      padding: 32px;
+      border-radius:  24px;
+      height: fit-content;
+      position: sticky;
+      top: 80px;
+
+      &-title {
+        margin-bottom: 32px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 1px;
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      &-item {
+        display: flex;
+        gap: 12px;
+
+        &-icon {
+          width: 30px;
+          height: 30px;
+        }
+
+        &-para {
+          flex: 1;
+          font-size: 1rem;
+          line-height: 1.4rem;
+          letter-spacing: 0.3px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-main,
+    &-sidebar {
+      @apply col-span-12;
+    }
+
+    &-sidebar {
+      @apply mb-20;
+    }
+  }
+
+}

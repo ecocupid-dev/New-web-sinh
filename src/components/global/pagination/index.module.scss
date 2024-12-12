@@ -1,0 +1,11 @@
+.wrapper {
+  :global {
+    .ant-pagination-item-active {
+      background-color: var(--priThree) !important;
+      border-color: var(--priDark) !important;
+      a {
+        color: var(--textDark) !important;
+      }
+    }
+  }
+}

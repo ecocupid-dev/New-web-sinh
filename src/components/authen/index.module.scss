@@ -1,0 +1,115 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  &-bg {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  &-logo {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    background: #f2ffd1;
+    border-radius: 12px;
+    margin: auto;
+  }
+
+  &-form {
+    @apply shadow-md;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 423px;
+    transform: translate(-50%, -50%);
+    padding: 24px;
+    border-radius: 12px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+
+    &-title {
+      @apply font-gereralSans;
+      font-size: 2.4rem;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: white;
+      margin: 24px 0;
+    }
+
+    &-inner {
+      @apply grid gap-2;
+    }
+  }
+
+  &-button {
+    color: #004737;
+    background: #56f09f;
+    font-size: 1rem;
+    height: fit-content;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: fit-content;
+    padding: 8px 32px;
+    margin: auto;
+    margin-top: 24px;
+  }
+
+  &-divider {
+    span {
+      color: white;
+    }
+
+    &::after,
+    &::before {
+      background: white;
+    }
+  }
+
+  &-foot {
+    color: white;
+  }
+
+  &-register {
+    color: #56f09f;
+    font-weight: bold;
+    margin-left: 8px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 580px) {
+    &-logo {
+      @apply col-span-1;
+      order: 2;
+      margin: 0;
+    }
+
+    &-form {
+      @apply grid grid-cols-3 gap-2;
+      width: 90vw;
+
+      &-title {
+        @apply col-span-2;
+        order: 1;
+
+        margin: 8px 0;
+        text-align: left;
+        line-height: normal;
+      }
+
+      &-inner {
+        @apply col-span-full;
+        order: 3;
+      }
+    }
+  }
+}
